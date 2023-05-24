@@ -2,7 +2,7 @@ import { app } from "./app";
 import http from "http";
 import { loadPlanets } from "./models/planetsModel";
 
-const port = 3000;
+const port = 5000;
 const server = http.createServer(app);
 
 loadPlanets.then(()=>{

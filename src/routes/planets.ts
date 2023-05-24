@@ -8,7 +8,7 @@ const getAllPlanetsController = new GetAllPlanetsController;
 planetsRouter.get("/planets", (req: Request, res: Response)=>{
     const message = getAllPlanetsController.getAllPlanets();
 
-    res.json(message);
+    return res.json(message);
 });
 
 export {planetsRouter};
