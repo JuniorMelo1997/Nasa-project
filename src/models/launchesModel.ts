@@ -20,4 +20,17 @@ function addNewLaunch({mission, rocket, launchDate, target}: IModelLaunch){
     launches = [...launches, launch];
 }
 
-export {launches, addNewLaunch};
+function dropLaunch(id: number){
+    // launches = launches.filter(launch => launch.flightNumber !== id);
+
+    launches = launches.map((launch)=>{
+        if(launch.flightNumber === id){
+            launch.upcoming = false;
+            launch.success = false;
+        }
+
+        return launch;
+    })
+}
+
+export {launches, addNewLaunch, dropLaunch};
